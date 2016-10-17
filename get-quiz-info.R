@@ -22,7 +22,9 @@ for (i in 1:length(data$assessment$section)) {
     for (j in 1:length(item$presentation$response_lid$render_choice)) {
       ## For all answers, get the answer text
       response_label <- item$presentation$response_lid$render_choice[[j]]
-      answers[j] <- response_label$material$mattext$text
+      if(class(response_label$material$mattext) != "character"){
+        answers[j] <- response_label$material$mattext$text
+      }
       if (j == length(item$presentation$response_lid$render_choice)) {
         ## Put the answers in a list
         all_answers[[i]] <- unlist(answers)
