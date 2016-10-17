@@ -24,8 +24,7 @@ for (i in 1:length(data$assessment$section)) {
     answers[j] <- response_label$material$mattext$text
     if (j == length(item$presentation$response_lid$render_choice)) {
       ## Put the answers in a list
-      ans_vec <- unlist(answers)
-      all_answers[i] <- ans_vec
+      all_answers[[i]] <- unlist(answers)
     }
   }
 }
