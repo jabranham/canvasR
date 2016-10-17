@@ -28,3 +28,7 @@ for (i in 1:length(data$assessment$section)) {
     }
   }
 }
+
+output <- data.frame(matrix(unlist(all_answers),
+                           nrow = length(all_answers), byrow = TRUE))
+output$question <- unlist(questions)
