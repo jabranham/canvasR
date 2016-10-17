@@ -50,3 +50,9 @@ for(l in 1:length(all_answers)){
 output <- data.frame(matrix(unlist(all_answers),
                            nrow = length(all_answers), byrow = TRUE))
 output$question <- unlist(questions)
+
+# take care of html from questions or answers
+html_patterns <- c("<div>", "</div>", "<p>", "</p>")
+for(m in 1:length(html_patterns)){
+  output <- as.data.frame(apply(output, c(1,2), function(x) gsub(html_patterns[m], "", x)))
+}
