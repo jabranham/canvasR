@@ -31,6 +31,22 @@ for (i in 1:length(data$assessment$section)) {
   }
 }
 
+# in case not all questions have the same number of possible answers
+max_answers <- 0
+for(k in 1:length(all_answers)){
+  if(length(all_answers[[k]] > max_answers)){
+    max_answers <- length(all_answers[[k]])
+  }
+}
+for(l in 1:length(all_answers)){
+  if(length(all_answers[[l]] < max_answers)){
+    all_answers[[l]] <- c(all_answers[[l]], rep("", max_answers-length(all_answers[[l]])))
+  }
+  if(is.null(all_answers[[l]])){
+    all_answers[[l]] <- rep("", max_answers)
+  }
+}
+
 output <- data.frame(matrix(unlist(all_answers),
                            nrow = length(all_answers), byrow = TRUE))
 output$question <- unlist(questions)
