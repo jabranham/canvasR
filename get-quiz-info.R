@@ -2,9 +2,9 @@ library(XML)
 
 ## For now, let's assume only multiple choice questions
 ## quiz1.xml should be an exported quiz from Canvas.
-data <- xmlParse("~/Desktop/gov310l-american-government-quiz-export/i324c027881109ab17358a3cc64ac2668/i324c027881109ab17358a3cc64ac2668.xml")
+data <- xmlToList(xmlParse("~/Documents/UT/Misc. Academic/Canvas Export Tool/data/one_section_multiple_types.xml"))
 
-data <- xmlToList(data)
+#data <- xmlToList(data)
 
 ## questions
 # data$assessment$section$item$presentation$material$mattext$text
