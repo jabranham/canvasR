@@ -1,3 +1,11 @@
+#' Import quizzes from xml objects
+#'
+#' @param data a list
+#' @param html_patterns a character vector of patterns to strip from question text
+#' @return a data.frame containing questions and answers
+#' @examples
+#' import_quiz(quiz)
+#' @export
 import_quiz <- function(data,
                        html_patterns = c("<div>", "</div>", "<p>", "</p>")
                        ){
