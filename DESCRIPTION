@@ -6,7 +6,7 @@ Authors@R: c(
     person("Brendan", "Apfeld", email = "brendan.apfeld@utexas.edu", role = c("aut", "cre")))
 Description: Currently supports importing canvas quizzes into R
 Depends:
-    R (>= 3.3.1)
+    R (>= 3.2.5)
 Imports:
     XML (>= 3.98)
 License: GPL-3
