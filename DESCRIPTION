@@ -1,9 +1,9 @@
 Package: canvasR
 Title: Tools for managing data from Canvas
 Version: 0.0.0.9000
-Authors@R:
-    person("Alex", "Branham", email = "branham@utexas.edu", role = c("aut", "cre")),
-    person("Brendan", "Apfeld", email = "brendan.apfeld@utexas.edu", role = c("aut", "cre"))
+Authors@R: c(
+    person("Alex", "Branham", email = "branham@utexas.edu", role = c("aut")),
+    person("Brendan", "Apfeld", email = "brendan.apfeld@utexas.edu", role = c("aut", "cre")))
 Description: Currently supports importing canvas quizzes into R
 Depends:
     R (>= 3.3.1)
