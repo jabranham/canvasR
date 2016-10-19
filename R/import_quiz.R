@@ -44,6 +44,9 @@ import_quiz <- function(file,
           }
         }
       }
+      else{
+        warning(paste0("Question ", i, " is not a multiple choice or true/false question. It has been ommitted from the output."))
+      }
     }
   }
 
