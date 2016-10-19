@@ -2,7 +2,7 @@
 
 # CanvasR
 
-This is an R package that deals with data exported from Canvas, the learning management system. Currently, we support importing quizzes.
+This is an R package that deals with data exported from Canvas, the learning management system. Currently, we support importing multiple choice and true/false quizzes.
 
 # Installing 
 
