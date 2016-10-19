@@ -1,9 +1,11 @@
 #' Import quizzes from xml objects
 #'
-#' @param data a list
+#' @param file a character containing the location of a Canvas-exported quiz.xml file
 #' @param html_patterns a character vector of patterns to strip from question text
+#' @param answer_fill what to fill answers with in the returned data.frame if it isn't perfectly rectangular
 #' @return a data.frame containing questions and answers
 #' @examples
+#' quiz <- system.file("extdata", "quiz.xml", package = "canvasR")
 #' import_quiz(quiz)
 #' @export
 import_quiz <- function(file,
