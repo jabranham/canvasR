@@ -4,12 +4,15 @@
 \alias{import_quiz}
 \title{Import quizzes from xml objects}
 \usage{
-import_quiz(data, html_patterns = c("<div>", "</div>", "<p>", "</p>"))
+import_quiz(file, html_patterns = c("<div>", "</div>", "<p>", "</p>"),
+  answer_fill = NA)
 }
 \arguments{
-\item{data}{a list}
+\item{file}{a character containing the location of a Canvas-exported quiz.xml file}
 
 \item{html_patterns}{a character vector of patterns to strip from question text}
+
+\item{answer_fill}{what to fill answers with in the returned data.frame if it isn't perfectly rectangular}
 }
 \value{
 a data.frame containing questions and answers
@@ -18,6 +21,7 @@ a data.frame containing questions and answers
 Import quizzes from xml objects
 }
 \examples{
+quiz <- system.file("extdata", "quiz.xml", package = "canvasR")
 import_quiz(quiz)
 }
 
