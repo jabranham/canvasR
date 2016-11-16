@@ -1,6 +1,6 @@
 Package: canvasR
 Title: Tools for managing data from Canvas
-Version: 0.0.0.9000
+Version: 0.0.0.9500
 Authors@R: c(
     person("Alex", "Branham", email = "branham@utexas.edu", role = c("aut")),
     person("Brendan", "Apfeld", email = "brendan.apfeld@utexas.edu", role = c("aut", "cre")))
