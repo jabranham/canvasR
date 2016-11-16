@@ -4,7 +4,8 @@
 \alias{export_quiz}
 \title{Export quiz as TeX}
 \usage{
-export_quiz(quiz, output_file, class_name, quiz_name, n_ver)
+export_quiz(quiz, output_file, class_name = "class name",
+  quiz_name = "quiz name", n_ver = 1, shuffle = F)
 }
 \arguments{
 \item{quiz}{a data.frame created by import_quiz}
@@ -16,6 +17,8 @@ export_quiz(quiz, output_file, class_name, quiz_name, n_ver)
 \item{quiz_name}{name of quiz to be used on quiz}
 
 \item{n_ver}{number of versions to create when TeX is compiled}
+
+\item{shuffle}{Logical indicating whether answer choices should be randomized}
 }
 \value{
 outputs a TeX file to output_file location

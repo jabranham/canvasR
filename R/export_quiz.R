@@ -5,6 +5,7 @@
 #' @param class_name name of class to be used on quiz
 #' @param quiz_name name of quiz to be used on quiz
 #' @param n_ver number of versions to create when TeX is compiled
+#' @param shuffle Logical indicating whether answer choices should be randomized
 #' @return outputs a TeX file to output_file location
 #' @export
 export_quiz <- function(quiz, output_file, class_name = "class name", quiz_name = "quiz name", n_ver = 1, shuffle = F){
